@@ -71,6 +71,7 @@ Synopsys VCS
 Aldec Riviera-PRO
 -----------------
 ``SIM=aldec``
+
 The :envvar:`LICENSE_QUEUE` environment variable can be used for this simulator –
 this setting will be mirrored in the TCL ``license_queue`` variable to control runtime license checkouts.
 
@@ -108,9 +109,11 @@ Waveforms
 Use of a simulation argument is required to generate waveforms.
 
 .. code-bash::
+
     SIM_ARGS ?= --wave=waveform.ghw
 
 or
 
 .. code-bash::
+
     SIM_ARGS ?= --vcd=waveform.vcd
