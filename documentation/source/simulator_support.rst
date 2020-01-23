@@ -99,8 +99,8 @@ Cadence Incisive, Cadence Xcelium
 GHDL
 ----
 ``SIM=ghdl``
-Support is preliminary.
-Noteworthy is that despite GHDL being a VHDL simulator, it implements the VPI interface.
+
+Despite GHDL being a VHDL simulator, it implements the VPI interface.
 
 
 Waveforms
