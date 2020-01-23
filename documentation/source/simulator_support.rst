@@ -6,6 +6,7 @@ This page documents any known quirks and gotchas in the various simulators.
 
 Icarus
 ------
+``SIM=icarus``
 
 Accessing bits in a vector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,6 +46,7 @@ to the top component as shown in the example below:
 
 Verilator
 ---------
+``SIM=verilator``
 
 cocotb supports Verilator 4.020 and above.
 Verilator converts Verilog code to C++ code that is compiled.
@@ -64,17 +66,21 @@ If your design's clocks vary in precision, the performance of the simulation can
 
 Synopsys VCS
 ------------
+``SIM=vcs``
 
 Aldec Riviera-PRO
 -----------------
+``SIM=aldec``
 The :envvar:`LICENSE_QUEUE` environment variable can be used for this simulator –
 this setting will be mirrored in the TCL ``license_queue`` variable to control runtime license checkouts.
 
 Mentor Questa
 -------------
+``SIM=questa``
 
 Mentor ModelSim
 ---------------
+``SIM=modelsim``
 
 Any ModelSim PE or ModelSim PE derivative (like ModelSim Microsemi, Intel, Lattice Edition) does not support the VHDL FLI feature.
 If you try to run with FLI enabled, you will see a ``vsim-FLI-3155`` error:
@@ -87,8 +93,24 @@ ModelSim DE and SE (and Questa, of course) supports the FLI.
 
 Cadence Incisive, Cadence Xcelium
 ---------------------------------
+``SIM=xcelium``
 
 GHDL
 ----
+``SIM=ghdl``
 Support is preliminary.
 Noteworthy is that despite GHDL being a VHDL simulator, it implements the VPI interface.
+
+
+Waveforms
+~~~~~~~~~
+
+Use of a simulation argument is required to generate waveforms.
+
+.. code-bash::
+    SIM_ARGS ?= --wave=waveform.ghw
+
+or
+
+.. code-bash::
+    SIM_ARGS ?= --vcd=waveform.vcd
