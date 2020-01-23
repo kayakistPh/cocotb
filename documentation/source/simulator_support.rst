@@ -108,12 +108,12 @@ Waveforms
 
 Use of a simulation argument is required to generate waveforms.
 
-.. code-bash::
+.. code-block::bash
 
     SIM_ARGS ?= --wave=waveform.ghw
 
 or
 
-.. code-bash::
+.. code-block::bash
 
     SIM_ARGS ?= --vcd=waveform.vcd
