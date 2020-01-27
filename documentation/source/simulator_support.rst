@@ -117,3 +117,8 @@ or
 .. code-block:: bash
 
     SIM_ARGS ?= --vcd=waveform.vcd
+    
+Simulation and compile arguments can also be used for other GHDL options such as:
+.. code-block:: bash
+    COMPILE_ARGS=--ieee=standard --std=08
+    
